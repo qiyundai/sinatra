@@ -1,0 +1,9 @@
+<% class View %>
+  <% def display(recipes) %>
+    <% recipes.each_with_index do |recipe, index| %>
+      <%= puts "[#{recipe.done? ? 'X' : ' '}] #{index + 1}. #{recipe.name} (#{recipe.rating})" %>
+      <%= puts " " %>
+      <%= puts "prep time: #{recipe.prep_time} | #{recipe.description}" %>
+      <%= puts "============================"
+    <% end %>
+  <% end %>
